@@ -1,8 +1,8 @@
-# eCommerce-Sneakers
+# eCommerce-Sneakers 👟
  
-This is a project from my eCommerce Sneaker 👟
+This is a project from my eCommerce Sneaker 
 
-<h1>eCommerce Website</h1>
+<h1>eCommerce Website 👟</h1>
 
 <li> eCommerce website where we sell the most pretty sneaker</li>
 <li>Contains Lightbox when open the gallery</li>
