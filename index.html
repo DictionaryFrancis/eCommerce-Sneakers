@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Sneakers 👟</title>
+</head>
+
+<body>
+    <header>
+        <div class="container_logo">
+            <a href="#">
+                <img class="logo" src="./images/logo.svg" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="current-page">Collections</li></a>
+                    <li><a href="#">Men</li></a>
+                    <li><a href="#">Women</li></a>
+                    <li><a href="#">About</li></a>
+                    <li><a href="#">Contact</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div class="container_avatar">
+            <img id="handleCartAnimation" class="cart_logo" src="./images/icon-cart.svg" alt="icon-cart" />
+            <img class="avatar_picture" src="./images/image-avatar.png" alt="avatar-picture" />
+        </div>
+    </header>
+    <div class="container-flex">
+        <main role="main">
+            <div class="main_image">
+                <img class="product_1" src="./images/image-product-1.jpg" alt="Sneakers">
+            </div>
+            <section class="gallery-wrapper">
+                <div class="gallery">
+                <img class="img" src="./images/image-product-1-thumbnail.jpg" alt="">
+                <img class="img" src="./images/image-product-2-thumbnail.jpg" alt="">
+                <img class="img" src="./images/image-product-3-thumbnail.jpg" alt="">
+                <img class="img" src="./images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+            </section>
+        </main>
+        <aside>
+            <h3>sneaker company</h3>
+            <h1>fall limited edition sneakers</h1>
+            <p>these low-profile snealers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+                they'll withstand everything the weather can offer.</p>
+            <p class="price">$125.00
+                <span>50%</span>
+            </p>
+            <p class="old-price">$250.00</p>
+            <div class="container-buy">
+                <div class="wrapper">
+                    <span class="minus">-</span>
+                    <span class="number">1</span>
+                    <span class="plus">+</span>
+                </div>
+                <div class="add-cart">
+                    <span>
+                        <img src="./images/icon-cart-buy.svg" alt="">
+                    </span>
+                    <span>
+                        Add to cart</span>
+                </div>
+        </aside>
+
+    </div>
+
+    <div class="open-cart" id="cart-modal">
+        <div class="container-inside-cart">
+        <h4 class="title-open-cart">Cart</h4>
+        <span class="close">&times;</span>
+    </div>
+        <p class="cart-list">Your cart is empty.</p>
+    </div>
+
+
+    <script src="./app/cart-open.js"></script>
+    <script src="./app/plusAndMinus.js"></script>
+    <script src="./app/lightbox.js"></script>
+
+</body>
+
+</html>
