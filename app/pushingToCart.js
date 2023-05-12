@@ -35,7 +35,7 @@ addCart.addEventListener('click', function(){
     console.log(name);
     
     productBought.innerHTML =`
-    <img class="img_product_bought" src="./images/image-product-1-thumbnail.jpg" alt="">
+    <img class="img_product_bought" src="./images/NEW_BALANCE_0.jpg" alt="">
     <div class="product_especification">
         <p class="product_title">Fall Limited Edition Sneakers</p>
         <p class="price-product_especification">$125.00 x ${a} <strong>$375.00</strong></p>
