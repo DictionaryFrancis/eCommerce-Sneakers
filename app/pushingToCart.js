@@ -26,6 +26,7 @@ function ifNumberCart(){
 }
 
 
+
 addCart.addEventListener('click', function(){
 
    // numberOverCart.style.display = 'block';
@@ -38,7 +39,7 @@ addCart.addEventListener('click', function(){
     <img class="img_product_bought" src="./images/NEW_BALANCE_0.jpg" alt="">
     <div class="product_especification">
         <p class="product_title">Fall Limited Edition Sneakers</p>
-        <p class="price-product_especification">$125.00 x ${a} <strong>$375.00</strong></p>
+        <p class="price-product_especification">$${dados["Price after Discount"].toFixed(2)} x ${a} <strong>$375.00</strong></p>
     </div>
     <img class="delete_product_especification" src="./images/icon-delete.svg" alt="" onclick="handleDeleteClick(this)">`
     ;

@@ -5,6 +5,12 @@ console.log('working')
 window.onload = ()=>{
     console.log('working')
     for (let i = 0; i < gallery.length; i++) {
+        gallery[0].classList.add('show');
+        //let firstElement = i.shift();
+        console.log(gallery[0]);
+        
+            //console.log(i);
+    
         gallery[i].onclick = () =>{
             if (clickedImage.length > 0) {
                 clickedImage[0].classList.remove('show');
