@@ -12,9 +12,9 @@ spanCloseBtn.onclick = function(){
     cartModal.style.display = 'none';
 }
 
+/*
 window.onclick = function(event){
     if (event.target == cartModal) {
         console.log('closed');
         cartModal.style.display = 'none';
-    }
-}
+    }*/
