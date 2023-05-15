@@ -33,13 +33,14 @@ addCart.addEventListener('click', function(){
     //numberOverCart.innerHTML = a;
 
    
-    console.log(name);
+    const valueMainPrice = dados["Price after Discount"] * a;
+    console.log(valueMainPrice);
     
     productBought.innerHTML =`
     <img class="img_product_bought" src="./images/NEW_BALANCE_0.jpg" alt="">
     <div class="product_especification">
         <p class="product_title">Fall Limited Edition Sneakers</p>
-        <p class="price-product_especification">$${dados["Price after Discount"].toFixed(2)} x ${a} <strong>$375.00</strong></p>
+        <p class="price-product_especification">$${dados["Price after Discount"].toFixed(2)} x ${a} <strong>$${valueMainPrice.toFixed(2)}</strong></p>
     </div>
     <img class="delete_product_especification" src="./images/icon-delete.svg" alt="" onclick="handleDeleteClick(this)">`
     ;
