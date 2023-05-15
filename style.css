@@ -347,3 +347,28 @@ p::first-letter {
     margin: 0 0 0 1em;
     cursor: pointer;
 }
+
+.checkout {
+    cursor: pointer;
+    border-radius: 12px;
+    width: 27em;
+    text-align: center;
+    color: #fff;
+    background: rgb(255, 125, 26);
+    border: none;
+    height: 3.8em;
+    font-family: 'Poppins', sans-serif;
+    margin: 0em 1em 0 1em;
+    box-shadow: 3px 5px 5px 1px hsl(219, 9%, 45%);
+}
+.checkout:hover {
+    opacity: 0.5;
+}
+
+
+/*---MEDIA QUERY---*/
+@media (max-width: 1370px){
+    .container-flex{
+        flex-direction: column;
+    }
+}

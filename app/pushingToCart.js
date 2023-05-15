@@ -3,6 +3,8 @@ let productBought = document.querySelector('.product_bought');
 let numberOverCart = document.querySelector('.number-overCart');
 const handleEmptyCart = document.querySelector('#handleEmptyCart');
 const deleteProductButtons = document.querySelectorAll('.delete_product_especification');
+const chekoutBtn = document.querySelector('.button-checkout');
+//<button class="checkout">Checkout</button>
 arrayCartList = []
 
 console.log(arrayCartList);
@@ -11,17 +13,34 @@ console.log(arrayCartList);
 function ifEmptyCart() {
     if (arrayCartList.length < 1) {
         handleEmptyCart.style.display = 'block';
+        chekoutBtn.style.display = 'none';2
+        
     } else{
         handleEmptyCart.style.display = 'none';
+        
     }
 }
 
 function ifNumberCart(){
     if (arrayCartList.length <1) {
         numberOverCart.style.display = 'none';
+        
     } else{
         numberOverCart.style.display = 'block';
         numberOverCart.innerHTML = a;
+    }
+}
+
+function handleCheckout(){
+    if (arrayCartList.length <1) {
+        chekoutBtn.style.display = 'none';
+        
+    } else{
+        chekoutBtn.style.display = 'block';
+        chekoutBtn.innerHTML =
+        `
+        <button class="checkout">Checkout</button>
+        `;
     }
 }
 
@@ -50,7 +69,7 @@ addCart.addEventListener('click', function(){
 
     ifNumberCart();
     ifEmptyCart();
-    
+    handleCheckout();
     
 })
 
