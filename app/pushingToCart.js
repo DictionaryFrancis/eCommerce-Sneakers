@@ -13,7 +13,7 @@ console.log(arrayCartList);
 function ifEmptyCart() {
     if (arrayCartList.length < 1) {
         handleEmptyCart.style.display = 'block';
-        chekoutBtn.style.display = 'none';2
+        chekoutBtn.style.display = 'none';
         
     } else{
         handleEmptyCart.style.display = 'none';
@@ -52,14 +52,14 @@ addCart.addEventListener('click', function(){
     //numberOverCart.innerHTML = a;
 
    
-    const valueMainPrice = dados["Price after Discount"] * a;
+    const valueMainPrice = priceAfterDiscount * a;
     console.log(valueMainPrice);
     
     productBought.innerHTML =`
     <img class="img_product_bought" src="./images/NEW_BALANCE_0.jpg" alt="">
     <div class="product_especification">
         <p class="product_title">Fall Limited Edition Sneakers</p>
-        <p class="price-product_especification">$${dados["Price after Discount"].toFixed(2)} x ${a} <strong>$${valueMainPrice.toFixed(2)}</strong></p>
+        <p class="price-product_especification">$${priceAfterDiscount.toFixed(2)} x ${a} <strong>$${valueMainPrice.toFixed(2)}</strong></p>
     </div>
     <img class="delete_product_especification" src="./images/icon-delete.svg" alt="" onclick="handleDeleteClick(this)">`
     ;
@@ -76,7 +76,7 @@ addCart.addEventListener('click', function(){
 function handleDeleteClick(button) {
     console.log('delete button clicked');
     // handle delete logic here
-    arrayCartList.pop();
+    arrayCartList.pop();//change to slice(TO DO)
     productBought.innerHTML = '';
     numberOverCart.style.display = 'none';
     ifEmptyCart()

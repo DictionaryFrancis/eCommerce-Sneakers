@@ -91,11 +91,12 @@ nav a:focus {
 
 /*---MAIN---*/
 .container-flex {
+    margin: 0 9em;
     display: flex;
 }
 
 main {
-    margin: 4em 8em 0 14em;
+    margin: 4em 8em 0 7em;
 }
 
 .product_1 {
@@ -134,7 +135,7 @@ section img:active{
 
 /*---ASIDE---*/
 aside {
-    margin: 5em 13em 0 0;
+    margin: 4em 13em 0 0;
 }
 
 h3 {
@@ -367,8 +368,12 @@ p::first-letter {
 
 
 /*---MEDIA QUERY---*/
-@media (max-width: 1370px){
+@media (max-width: 420px){
     .container-flex{
         flex-direction: column;
+        margin: 0 2em;
+    }
+    main{
+        margin: 3em 0em;
     }
 }
