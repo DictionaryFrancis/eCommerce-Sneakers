@@ -1,21 +1,33 @@
-const dados = {
-    "Main Price": 125,
-    "Discount": 50,//in %percent discount(50%)
-    
+const product = {
+    mainPrice: 125,
+    discountPercentage: 50,
+
+    /** Returns the formatted main price. Ex: '$ 100.50' */
+    getMainPrice: function () {
+        let formattedMainPrice = `$ ${formatTwoDecimalPlaces(this.mainPrice)}`;
+
+        return formattedMainPrice;
+    },
+
+    /** Returns the formatted discount percentage. Ex: '10 %' */
+    getDiscountPercentage: function () {
+        let formattedDiscountPercentage = `${this.discountPercentage} %`;
+
+        return formattedDiscountPercentage;
+    },
+
+    /** Returns the formatted price after discount. Ex: '$ 5.25' */
+    getPriceAfterDiscount: function () {
+        let priceAfterDiscount = this.mainPrice * this.discountPercentage / 100;
+        let formattedPriceAfterDiscount = `$ ${formatTwoDecimalPlaces(priceAfterDiscount)}`;
+
+        return formattedPriceAfterDiscount;
+    },
 };
 
+const mainPriceToShow = product.getMainPrice();
+const discountPercentageToShow = product.getDiscountPercentage();
+const priceAfterDiscountToShow = product.getPriceAfterDiscount();
 
-///discountParse = dados["Discount"]/100;
-//console.log(discountParse);
-
-priceAfterDiscount = dados["Main Price"] * dados["Discount"]/100;
-console.log(priceAfterDiscount);
-
-const mainPrice = document.querySelector('.price').innerHTML =`
-$${priceAfterDiscount.toFixed(2)}
-<span id="discount">${dados["Discount"]}%</span>`
-;
-
-//const discount = document.querySelector('#discount').innerHTML = `$${dados["Discount"]`;
-
-const oldPrice = document.querySelector('.old-price').textContent =`$${dados["Main Price"].toFixed(2)}`;
+document.querySelector('.price').innerHTML = `${priceAfterDiscountToShow}<span id="discount">${discountPercentageToShow}</span>`;
+document.querySelector('.old-price').textContent = `${mainPriceToShow}`;
